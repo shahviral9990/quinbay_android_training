@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidTraining">
-        <activity android:name=".constraintlayout.ConstraintLayoutActivity"></activity>
+        <activity android:name=".intents.ExplicitIntentActivity"></activity>
+        <activity android:name=".intents.IntentsActivity" />
+        <activity android:name=".constraintlayout.ConstraintLayoutActivity" />
         <activity android:name=".binding.BindingActivity" />
         <activity android:name=".webview.WebViewActivity" />
         <activity android:name=".framelayout.FrameLayoutActivity" />
