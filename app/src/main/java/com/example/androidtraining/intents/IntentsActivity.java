@@ -21,7 +21,8 @@ public class IntentsActivity extends AppCompatActivity {
         });
         findViewById(R.id.explicit_intent).setOnClickListener(view -> {
             Intent intent = new Intent(this, ExplicitIntentActivity.class);
-            
+            intent.putExtra("value1", 1);
+            intent.putExtra("value2", 3);
             startActivity(intent);
         });
     }
