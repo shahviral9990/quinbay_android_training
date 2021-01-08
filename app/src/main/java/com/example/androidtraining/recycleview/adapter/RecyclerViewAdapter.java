@@ -38,9 +38,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         UserData userData = mUserDataList.get(position);
         holder.textView.setText(userData.getName());
         Glide.with(holder.mImageView.getContext()).load(userData.getImageUrl()).placeholder(R.drawable.placeholder).into(holder.mImageView);
-        holder.rootView.setOnClickListener((view -> {
-            mUserDataInterface.onImageClick(userData);
-        }));
+        holder.rootView.setOnClickListener((view -> mUserDataInterface.onUserClick(userData)));
     }
 
     @Override
@@ -49,7 +47,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     public interface UserDataInterface {
-        void onImageClick(UserData userData);
+        void onUserClick(UserData userData);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

@@ -38,7 +38,7 @@ public class RecycleViewActivity extends AppCompatActivity implements RecyclerVi
     }
 
     @Override
-    public void onImageClick(UserData userData) {
+    public void onUserClick(UserData userData) {
         Toast.makeText(this, "Image Clicked for" + userData.getName(), Toast.LENGTH_SHORT).show();
     }
 }
