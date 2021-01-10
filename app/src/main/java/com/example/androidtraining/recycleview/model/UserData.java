@@ -3,10 +3,20 @@ package com.example.androidtraining.recycleview.model;
 public class UserData {
     private String name;
     private String imageUrl;
+    private boolean isDeveloper;
 
-    public UserData(String name, String imageUrl) {
+    public UserData(String name, String imageUrl, boolean isDeveloper) {
         this.name = name;
         this.imageUrl = imageUrl;
+        this.isDeveloper = isDeveloper;
+    }
+
+    public boolean isDeveloper() {
+        return isDeveloper;
+    }
+
+    public void setDeveloper(boolean developer) {
+        isDeveloper = developer;
     }
 
     public String getName() {

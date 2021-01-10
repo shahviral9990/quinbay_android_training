@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.androidtraining.R;
+import com.example.androidtraining.intents.model.ParcelableModel;
+import com.example.androidtraining.intents.model.SerializableModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,6 +29,8 @@ public class IntentsActivity extends AppCompatActivity {
             Intent intent = new Intent(this, ExplicitIntentActivity.class);
             intent.putExtra("value1", 1);
             intent.putExtra("value2", 3);
+            intent.putExtra("serializableModel", new SerializableModel("Viral"));
+            intent.putExtra("parcelableModel", new ParcelableModel("viral"));
             startActivity(intent);
         });
     }

@@ -17,8 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
 
-    private List<UserData> mUserDataList;
-    private UserDataInterface mUserDataInterface;
+    private final List<UserData> mUserDataList;
+    private final UserDataInterface mUserDataInterface;
 
     public RecyclerViewAdapter(List<UserData> userDataList, UserDataInterface mUserDataInterface) {
         this.mUserDataList = userDataList;
@@ -36,9 +36,14 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         UserData userData = mUserDataList.get(position);
-        holder.textView.setText(userData.getName());
-        Glide.with(holder.mImageView.getContext()).load(userData.getImageUrl()).placeholder(R.drawable.placeholder).into(holder.mImageView);
+        holder.tvName.setText(userData.getName());
+        Glide.with(holder.ivProfile.getContext()).load(userData.getImageUrl()).placeholder(R.drawable.placeholder).into(holder.ivProfile);
         holder.rootView.setOnClickListener((view -> mUserDataInterface.onUserClick(userData)));
+        if (userData.isDeveloper()) {
+            holder.ivDev.setVisibility(View.VISIBLE);
+        } else {
+            holder.ivDev.setVisibility(View.GONE);
+        }
     }
 
     @Override
@@ -51,19 +56,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
-        private final TextView textView;
-        private final ImageView mImageView;
+        private final TextView tvName;
+        private final ImageView ivProfile;
         private final View rootView;
+        private final ImageView ivDev;
 
         public ViewHolder(View view) {
             super(view);
             rootView = view;
-            textView = view.findViewById(R.id.textView10);
-            mImageView = view.findViewById(R.id.imageView);
+            tvName = view.findViewById(R.id.tv_name);
+            ivProfile = view.findViewById(R.id.iv_profile);
+            ivDev = view.findViewById(R.id.iv_dev);
         }
 
-        public TextView getTextView() {
-            return textView;
-        }
     }
 }
