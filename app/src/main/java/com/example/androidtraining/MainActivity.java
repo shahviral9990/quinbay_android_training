@@ -9,6 +9,7 @@ import com.example.androidtraining.constraintlayout.ConstraintLayoutActivity;
 import com.example.androidtraining.fragments.FragmentsActivity;
 import com.example.androidtraining.framelayout.FrameLayoutActivity;
 import com.example.androidtraining.glide.GlideActivity;
+import com.example.androidtraining.intents.IntentsActivity;
 import com.example.androidtraining.lifecycle.LifecycleActivity;
 import com.example.androidtraining.linearlayout.LinearLayoutActivity;
 import com.example.androidtraining.recycleview.RecycleViewActivity;
@@ -34,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.card_view).setOnClickListener(view -> startActivity(new Intent(this, CardViewActivity.class)));
         findViewById(R.id.web_view).setOnClickListener(view -> startActivity(new Intent(this, WebViewActivity.class)));
         findViewById(R.id.constraint_layout).setOnClickListener(view -> startActivity(new Intent(this, ConstraintLayoutActivity.class)));
+        findViewById(R.id.intents).setOnClickListener(view -> startActivity(new Intent(this, IntentsActivity.class)));
+
         findViewById(R.id.bindings).setOnClickListener(view -> startActivity(new Intent(this, BindingActivity.class)));
         findViewById(R.id.shared_preference).setOnClickListener(view -> startActivity(new Intent(this, SharedPreferencesActivity.class)));
         findViewById(R.id.retrofit).setOnClickListener(view -> startActivity(new Intent(this, RetrofitActivity.class)));

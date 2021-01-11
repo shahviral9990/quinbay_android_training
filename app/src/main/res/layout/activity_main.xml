@@ -140,6 +140,26 @@
             app:cardBackgroundColor="@color/teal_200">
 
             <TextView
+                android:id="@+id/intents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Intents"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:cardBackgroundColor="@color/teal_200">
+
+            <TextView
                 android:id="@+id/bindings"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
