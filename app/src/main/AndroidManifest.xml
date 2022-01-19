@@ -3,7 +3,6 @@
     package="com.example.androidtraining">
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".App"
@@ -13,6 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidTraining">
+        <activity
+            android:name=".bottom_navigation.BottomNavigation"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".fragments.FragmentsActivity" />
         <activity android:name=".recycleview.RecycleViewActivity" />
         <activity android:name=".glide.GlideActivity" />
@@ -28,11 +36,6 @@
         <activity android:name=".linearlayout.LinearLayoutActivity" />
         <activity android:name=".lifecycle.LifecycleActivity" />
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
